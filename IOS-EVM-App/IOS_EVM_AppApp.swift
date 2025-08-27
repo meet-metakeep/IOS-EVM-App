@@ -6,27 +6,17 @@
 //
 
 import SwiftUI
-import SwiftData
+import MetaKeep
 
 @main
 struct IOS_EVM_AppApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    // Init SDK
+    // TODO: Replace with your own App ID from console.metakeep.xyz
+    let sdk = MetaKeep(appId: "Your EVM app ID here", appContext: AppContext())
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(sdk: sdk)
         }
-        .modelContainer(sharedModelContainer)
     }
 }
