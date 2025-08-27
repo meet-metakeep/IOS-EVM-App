@@ -2,6 +2,8 @@
 
 A SwiftUI iOS app demonstrating MetaKeep SDK integration for wallet management and transaction signing on Ethereum (Sepolia testnet).
 
+![App](public/app.png)
+
 ## Features
 
 - **Get Wallet**: Retrieve user's Ethereum wallet address using MetaKeep SDK
