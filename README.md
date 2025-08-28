@@ -49,6 +49,8 @@ Configure your app to handle MetaKeep callback URLs:
    - **Identifier**: `metakeep`
    - **URL Schemes**: `$(PRODUCT_BUNDLE_IDENTIFIER)`
 
+![App Screenshot](public/img1.png)
+
 ## Configuration
 
 ### 1. Set Your MetaKeep App ID
